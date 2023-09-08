@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "npx prettier -w ${file} && npx eslint --fix ${file}",
+      "label": "astro:format",
+      "problemMatcher": [
+        "$eslint-stylish"
+      ],
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "panel": "shared",
+        "clear": true,
+        "echo": false,
+        "focus": false,
+        "showReuseMessage": false,
+        "close": true
+      }
+    },
+  ]
+}
