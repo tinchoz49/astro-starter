@@ -1,7 +1,8 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
-    'standard'
+    'standard',
+    'standard-jsx'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -11,17 +12,14 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.jsx', '*.tsx'],
-      extends: [
-        'standard-jsx'
-      ]
-    },
-    {
       files: ['*.astro'],
       extends: [
         'plugin:astro/recommended',
         'plugin:astro/jsx-a11y-recommended'
       ],
+      globals: {
+        astroHTML: true
+      },
       env: {
         // Enables global variables available in Astro components.
         node: true,
@@ -34,6 +32,10 @@ module.exports = {
         extraFileExtensions: ['.astro']
       },
       rules: {
+        indent: ['error', 2],
+        'react/jsx-indent': 'off',
+        'react/jsx-key': 'off',
+        'react/jsx-pascal-case': 'off'
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
       }

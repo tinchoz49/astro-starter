@@ -1,0 +1,5 @@
+{
+  "[astro]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
+}
