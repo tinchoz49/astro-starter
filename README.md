@@ -1,15 +1,14 @@
-# Astro Standard Starter
+# Astro Starter
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tinchoz49/astro-standard-starter/tree/main)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/tinchoz49/astro-standard-starter/tree/main)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tinchoz49/astro-starter/tree/main)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/tinchoz49/astro-starter/tree/main)
 
 ## About
 
 This is an starter Astro project with:
-1. optional typescript support
-1. astro files are being lint and format with prettier + eslint
+1. astro files are being lint and format with the [Anthony's ESLint config preset](https://github.com/antfu/eslint-config)
 1. tailwind support
-1. optional vitest support
+1. vitest support
 
 ## 🚀 Project Structure
 
@@ -48,12 +47,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run check`           | Check your project for errors                    |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-| `npm run format`          | Format files with prettier + standard            |
+| `npm run fix`             | Format with ESLint                               |
 | `npm run lint`            | Lint files with standard                         |
-| `npm run check`           | Check your project for errors                    |
 | `npm test`                | Run your tests with vitest                       |
-
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
