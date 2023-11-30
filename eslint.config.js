@@ -16,9 +16,10 @@ export default antfu(
   {},
   ...compat.config({
     overrides: [{
-      files: ['*.astro'],
+      files: ['**/*.astro'],
       extends: [
         'plugin:astro/recommended',
+        'plugin:astro/jsx-a11y-recommended',
       ],
       globals: {
         astroHTML: true,
