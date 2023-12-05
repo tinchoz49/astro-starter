@@ -13,7 +13,13 @@ const compat = new FlatCompat({
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default antfu(
-  {},
+  {
+    formatters: {
+      css: true,
+      html: true,
+      markdown: true,
+    },
+  },
   ...compat.config({
     overrides: [{
       files: ['**/*.astro'],

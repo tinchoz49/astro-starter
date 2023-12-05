@@ -6,6 +6,7 @@
 ## About
 
 This is an starter Astro project with:
+
 1. astro files are being lint and format with the [Anthony's ESLint config preset](https://github.com/antfu/eslint-config)
 1. tailwind support
 1. vitest support

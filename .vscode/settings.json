@@ -16,6 +16,8 @@
     "json",
     "jsonc",
     "yaml",
-    "astro"
+    "astro",
+    "css",
+    "tailwindcss"
   ]
 }
