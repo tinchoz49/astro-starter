@@ -49,4 +49,9 @@ export default antfu(
       },
     }],
   }),
+  {
+    ignores: [
+      'public/',
+    ],
+  },
 )
