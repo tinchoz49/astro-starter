@@ -23,7 +23,6 @@ export default antfu(
     rules: {
       'no-undef': ['error'],
       'curly': ['error', 'multi-line'],
-      'n/prefer-global/process': 0,
       'no-console': 0,
       'antfu/if-newline': 0,
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
