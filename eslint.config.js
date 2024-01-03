@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import antfu from '@antfu/eslint-config'
+import { antfu, typescript } from '@antfu/eslint-config'
 import { FlatCompat } from '@eslint/eslintrc'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -14,12 +14,25 @@ const compat = new FlatCompat({
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default antfu(
   {
+    typescript: false,
     formatters: {
       css: true,
       html: true,
       markdown: true,
     },
+    rules: {
+      'no-undef': ['error'],
+      'curly': ['error', 'multi-line'],
+      'n/prefer-global/process': 0,
+      'no-console': 0,
+      'antfu/if-newline': 0,
+      'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    },
   },
+  typescript({
+    files: ['**/*.ts', '**/*.tsx', '**/*.astro'],
+    componentExts: ['.astro'],
+  }),
   ...compat.config({
     overrides: [{
       files: ['**/*.astro'],
@@ -37,15 +50,12 @@ export default antfu(
         'es2020': true,
       },
       parser: 'astro-eslint-parser',
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
-      },
       rules: {
         // this is necessary to force a correct indentation in astro
         'style/indent': ['error', 2],
         'style/jsx-indent': 'off',
         'style/jsx-one-expression-per-line': 'off',
+        'unused-imports/no-unused-vars': 'off',
       },
     }],
   }),
