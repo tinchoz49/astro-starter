@@ -65,9 +65,6 @@ export default antfu(
         prefer: 'double',
       }],
     },
-    stylistic: {
-      quotes: 'single',
-    },
     typescript: {
       tsconfigPath: 'tsconfig.json',
     },
