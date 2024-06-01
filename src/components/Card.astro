@@ -7,13 +7,13 @@ interface Props {
 const { href, title }: Props = Astro.props
 ---
 
-<div class="bg-white circular-card">
+<div class="circular-card bg-white">
   <a
     href={href}
     target="_blank"
-    class="flex items-center justify-center p-6 transition duration-300 bg-white shadow-lg circular-card hover:shadow-xl"
+    class="circular-card flex items-center justify-center bg-white p-6 shadow-lg transition duration-300 hover:shadow-xl"
   >
-    <span class="text-lg font-semibold text-teal-400 colorful-link">
+    <span class="colorful-link text-lg font-semibold text-teal-400">
       {title}
     </span>
   </a>
