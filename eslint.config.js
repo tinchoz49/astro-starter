@@ -1,23 +1,24 @@
 /* eslint perfectionist/sort-objects: "error" */
 
 import { standard } from 'eslint-config-standard-ext'
+import astroPlugin from 'eslint-plugin-astro'
 import tailwind from 'eslint-plugin-tailwindcss'
 
-export default standard(
+const a11yConfig = astroPlugin.configs['jsx-a11y-recommended'].find(c => !!c?.plugins?.['jsx-a11y'])
+
+const config = standard(
   {
-    astro: {
-      a11y: true,
-    },
-    formatters: false,
-    typescript: {
-      tsconfigPath: 'tsconfig.json',
-    },
+    astro: true,
+    formatters: true,
+    markdown: true,
+    typescript: true,
   },
   {
     ignores: [
       'public/',
     ],
   },
+  a11yConfig,
   ...tailwind.configs['flat/recommended'],
   {
     rules: {
@@ -25,3 +26,5 @@ export default standard(
     },
   }
 )
+
+export default config
