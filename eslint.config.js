@@ -13,17 +13,17 @@ const config = standard(
     markdown: true,
     typescript: true,
   },
-  {
-    ignores: [
-      'public/',
-    ],
-  },
   a11yConfig,
   ...tailwind.configs['flat/recommended'],
   {
     rules: {
       'tailwindcss/no-custom-classname': 'off',
     },
+  },
+  {
+    ignores: [
+      'public/',
+    ],
   }
 )
 
