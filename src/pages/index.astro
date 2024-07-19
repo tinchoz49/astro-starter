@@ -1,4 +1,7 @@
 ---
+import { Picture } from 'astro:assets'
+
+import logo from '../assets/logo.png'
 import Card from '../components/Card.astro'
 import Layout from '../layouts/Layout.astro'
 ---
@@ -6,16 +9,14 @@ import Layout from '../layouts/Layout.astro'
 <Layout title="Welcome to Astro.">
   <div class="flex min-h-screen flex-col items-center justify-center">
     <div class="w-3/4 rounded-lg bg-white p-8 shadow-md lg:w-1/2">
-      <div
-        class="mb-8 flex items-center justify-center rounded bg-gray-200 p-4"
-      >
-        <h1 class="text-xl font-semibold">Astro Starter</h1>
+      <div class="mb-8 flex items-center justify-center rounded">
+        <Picture src={logo} alt="Astro Starter Logo" />
       </div>
       <div class="flex justify-around">
         <Card title="Astro" href="https://astro.build" />
         <Card title="Tailwind" href="https://tailwindcss.com" />
         <Card
-          title="Standard Ext"
+          title="Standard"
           href="https://github.com/tinchoz49/eslint-config-standard-ext"
         />
       </div>

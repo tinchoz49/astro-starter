@@ -1,5 +1,8 @@
+![Astro Starter](src/assets/logo.png 'Astro Starter')
+
 # Astro Starter
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard--ext-05ae89.svg)](https://github.com/tinchoz49/eslint-config-standard-ext)
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tinchoz49/astro-starter/tree/main)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/tinchoz49/astro-starter/tree/main)
 
