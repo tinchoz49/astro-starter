@@ -22,18 +22,15 @@
   },
   "devDependencies": {
     "eslint": "^9.7.0",
-    "eslint-config-standard-ext": "^1.0.1",
-    "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-format": "^0.1.2",
+    "eslint-astro-mate": "^0.0.3",
+    "eslint-config-standard-ext": "^1.1.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "prettier-plugin-astro": "^0.14.1",
-    "vitest": "^2.0.3"
+    "vitest": "^2.0.5"
   },
   "pnpm": {
     "overrides": {
-      "eslint": "$eslint",
-      "prettier-plugin-astro": "$prettier-plugin-astro"
+      "eslint": "$eslint"
     }
   }
 }
